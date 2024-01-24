@@ -1,20 +1,31 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-grid>
+    <ion-row class="ion-justify-content-end">
+      <ion-col size="3" class="">
+        <div class="form-box">
+          <label class="form-label" labelPlacement="stacked"
+            ><h4>Login</h4></label
+          >
+          <ion-list class="login-form">
+            <ion-item class="login-input" color="white">
+              <ion-input
+                class="input"
+                label="Email"
+                labelPlacement="stacked"
+              ></ion-input>
+            </ion-item>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+            <ion-item class="login-input" color="white">
+              <ion-input
+                class="input"
+                label="Password"
+                labelPlacement="stacked"
+              ></ion-input>
+            </ion-item>
+          </ion-list>
+          <ion-button (click)="hello()">Submit</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
