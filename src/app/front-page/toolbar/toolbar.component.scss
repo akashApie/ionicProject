@@ -1,0 +1,29 @@
+.select-list{
+    width: fit-content;
+}
+
+ion-searchbar{
+    width: 50%;
+}
+
+@media (max-width:575px) {
+    ion-select::part(label),ion-select::part(text){
+        display: none;
+    }   
+    
+    ion-searchbar{
+        --placeholder-color: transparent;
+        border-color: black;
+    }
+}
+
+ion-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+ion-toolbar{
+    --background: whitesmoke !important;
+
+}

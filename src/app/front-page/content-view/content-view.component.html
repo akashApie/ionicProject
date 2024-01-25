@@ -1,0 +1,11 @@
+<ion-card
+  *ngFor="let i of menu"
+  [class]="'card-' + i.background"
+  [ngStyle]="{ 'background-color': i['background'] }"
+>
+  <ion-card-header>0</ion-card-header>
+  <div class="card-content">
+    <ion-icon [name]="i['icon']"></ion-icon>
+    <ion-card-content>{{ i["title"] }}</ion-card-content>
+  </div>
+</ion-card>

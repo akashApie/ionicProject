@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./front-page.page.scss'],
 })
 export class FrontPagePage implements OnInit {
-
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
+    // this.screen();
   }
 
+  // async screen() {
+  //   await this.platform.ready().then(() => {
+  //     this.width = this.platform.width();
+  //     console.log(this.width);
+  //   });
+  // }
 }

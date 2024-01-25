@@ -1,0 +1,19 @@
+.menu-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width:575px) {
+    .hide-text{
+        display: none;
+    }
+}
+
+ion-list{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: whitesmoke;
+}

@@ -3,43 +3,22 @@
     <ion-header>
       <ion-toolbar color="tertiary">
         <div class="title">
-          <ion-icon name="menu-outline" size="small"></ion-icon>
-          <ion-text>Menu</ion-text>
+          <ion-icon name="menu-outline" size="large"></ion-icon>
+          <ion-text class="hide-on-xs">Menu</ion-text>
         </div>
       </ion-toolbar>
     </ion-header>
-    <ion-content class="ion-padding">
-      <ion-list>
-        <div class="menu-list">
-          <ion-icon name="library-outline"></ion-icon>
-          <ion-text>Dashboard</ion-text>
-        </div>
-        <div class="menu-list">
-          <ion-icon name="notifications"></ion-icon>
-          <ion-text>Chat</ion-text>
-        </div>
-        <div class="menu-list">
-          <ion-icon name="add-circle"></ion-icon>
-          <ion-text>New Job</ion-text>
-        </div>
-        <div class="menu-list">
-          <ion-icon name="notifications"></ion-icon>
-          <ion-text>Notifications</ion-text>
-        </div>
-        <div class="menu-list">
-          <ion-icon name="calendar"></ion-icon>
-          <ion-text>Calender</ion-text>
-        </div>
-      </ion-list>
+    <ion-content>
+      <app-sidebar></app-sidebar>
     </ion-content>
   </ion-menu>
 
   <div class="ion-page" id="main">
     <ion-header>
-      <ion-toolbar>
-        <ion-title>Main View</ion-title>
-      </ion-toolbar>
+      <app-toolbar></app-toolbar>
     </ion-header>
-    <ion-content class="ion-padding"> Main View Content </ion-content>
+    <ion-content class="ion-padding">
+      <app-content-view></app-content-view
+    ></ion-content>
   </div>
 </ion-split-pane>
