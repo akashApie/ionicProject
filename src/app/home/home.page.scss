@@ -20,3 +20,15 @@ ion-list{
 ion-row{
   padding: 15% 0;
 }
+
+.register{
+  display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-small;
+}
+
+#register{
+  font-size: 12px;
+}

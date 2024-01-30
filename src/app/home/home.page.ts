@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { NodeService } from '../node.service';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -7,10 +9,32 @@ import { Router } from '@angular/router';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  constructor(private route: Router) {}
+  constructor(private serv: NodeService, private fb: FormBuilder) {}
 
-  hello() {
-    console.log('hello');
-    this.route.navigate(['/front-page']);
+  showRegister = false;
+
+  registerForm = this.fb.group({
+    username: [''],
+    email: [''],
+    password: [''],
+  });
+
+  users: any;
+  register_login() {
+    console.log(this.registerForm);
+    if (this.showRegister)
+      this.serv.addUser(this.registerForm.value).subscribe((o) => {});
+    else {
+      var loginForm = this.registerForm;
+      loginForm.removeControl(username);
+      console.log(loginForm);
+      this.serv.getUser(loginForm).subscribe((o) => {
+        console.log(o);
+      });
+    }
+  }
+
+  register() {
+    this.showRegister = !this.showRegister;
   }
 }
